@@ -1,0 +1,77 @@
+# AgenticTrading default configuration.
+# Copy to configs/local.yaml and edit; nothing here needs an API key to run.
+
+seed: 7
+
+data:
+  # Tried in order; the first provider that can serve the symbol wins.
+  provider_order: ["coinbase", "twelvedata", "yahoo", "synthetic"]
+  cache_dir: "data_cache"
+  cache_enabled: true
+  timeout_s: 20
+  max_retries: 2
+  timeframe: "1d"
+  lookback_bars: 320
+  allow_network: true
+  universe: ["BTC-USD", "ETH-USD"]
+
+llm:
+  # auto = use an LLM only if the API key env var is set.
+  enabled: "auto"
+  provider: "openai"
+  base_url: "https://api.openai.com/v1"
+  model: "gpt-4o-mini"
+  api_key_env: "OPENAI_API_KEY"
+  temperature: 0.2
+  max_tokens: 800
+  timeout_s: 60
+
+risk:
+  # Deterministic limits. The LLM can propose, never override these.
+  max_position_weight: 0.30
+  min_confidence: 0.55
+  max_daily_turnover: 0.50
+  stop_loss_pct: 0.08
+  take_profit_pct: 0.25
+  max_drawdown_stop: 0.25
+  vol_target_annual: 0.40
+  allow_short: false
+  max_bars_hold: 0
+  cooldown_bars_after_stop: 2
+
+agents:
+  analyst_names: ["technical", "momentum", "mean_reversion", "risk"]
+  debate_rounds: 1
+  use_llm: true
+  min_bars_for_signals: 60
+
+backtest:
+  initial_cash: 10000
+  fee_bps: 10
+  slippage_bps: 5
+  warmup_bars: 60
+  risk_free_rate: 0.04
+  periods_per_year: 365
+  allow_short: false
+
+execution:
+  # Safety-first defaults: nothing can reach a real venue until you opt in twice.
+  enabled: false            # master switch for the execution layer
+  broker: "paper"           # "paper" | "robinhood"
+  mode: "paper"             # "paper" | "live"
+  dry_run: true             # validate + journal the order, never send it
+  # Going live requires ALL of: enabled=true, mode=live, dry_run=false,
+  # no kill-switch file, and this env var set to the exact phrase below.
+  live_confirm_env: "AGENTIC_TRADING_LIVE"
+  live_confirm_phrase: "yes-i-understand-the-risk"
+  # Robinhood Agentic Trading is an MCP server (streamable HTTP + OAuth).
+  mcp_url: "https://agent.robinhood.com/mcp/trading"
+  mcp_access_token_env: "ROBINHOOD_MCP_ACCESS_TOKEN"
+  mcp_timeout_s: 30
+  # Blast-radius caps enforced in code, regardless of what any model says.
+  max_order_notional: 100
+  max_daily_orders: 10
+  max_daily_notional: 500
+  symbol_allowlist: []      # empty -> use data.universe
+  audit_log_path: "reports/orders.jsonl"
+  kill_switch_file: "STOP_TRADING"
