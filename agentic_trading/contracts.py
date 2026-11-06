@@ -62,6 +62,9 @@ class Action(str, Enum):
         if isinstance(value, Action):
             return value
         text = str(value).strip().lower()
+        # str() on a str-mixin Enum yields "action.buy" on Python 3.11+.
+        if "." in text:
+            text = text.rsplit(".", 1)[-1]
         aliases = {"long": "buy", "increase": "buy", "enter": "buy",
                    "short": "sell", "exit": "sell", "reduce": "sell",
                    "hold": "hold", "wait": "hold", "none": "hold", "noop": "hold"}
@@ -484,6 +487,26 @@ class OrderType(str, Enum):
     STOP_LIMIT = "stop_limit"
 
 
+def _coerce_enum(enum_cls, value, field_name: str):
+    """Accept an enum member, its value, or its ``Class.MEMBER`` string form.
+
+    Python 3.11+ renders ``str(SomeStrEnum.MEMBER)`` as ``"SomeStrEnum.MEMBER"``
+    rather than the value, so constructing an enum from ``str(member)`` breaks.
+    Broker adapters pass these values around, so coercion must be tolerant.
+    """
+    if isinstance(value, enum_cls):
+        return value
+    text = str(value).strip()
+    if "." in text:
+        text = text.rsplit(".", 1)[-1]
+    try:
+        return enum_cls(text.strip().lower())
+    except ValueError as exc:
+        raise ValueError(
+            f"{field_name} must be one of "
+            f"{[m.value for m in enum_cls]}, got {value!r}"
+        ) from exc
+
 class OrderStatus(str, Enum):
     PENDING = "pending"
     SUBMITTED = "submitted"
@@ -521,8 +544,9 @@ class OrderRequest:
     reason: str = ""                     # decision provenance, carried into the audit log
 
     def __post_init__(self) -> None:
-        object.__setattr__(self, "side", OrderSide(str(self.side)))
-        object.__setattr__(self, "order_type", OrderType(str(self.order_type)))
+        object.__setattr__(self, "side", _coerce_enum(OrderSide, self.side, "side"))
+        object.__setattr__(self, "order_type",
+                           _coerce_enum(OrderType, self.order_type, "order_type"))
         if self.qty is None and self.notional is None:
             raise ValueError("order requires qty or notional")
         if self.order_type in (OrderType.LIMIT, OrderType.STOP_LIMIT) and self.limit_price is None:

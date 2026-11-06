@@ -1,0 +1,18 @@
+repo,stars_observed_2026-11-05,forks,open_issues,language,license_spdx,created_at,pushed_at,size_kb,default_branch,role_in_report
+TauricResearch/TradingAgents,120871,23110,123,Python,Apache-2.0,2024-12-28,2026-11-04,6566,main,deep dive #1
+HKUDS/Vibe-Trading,37746,6114,15,Python,MIT,2026-04-01,2026-11-05,94660,main,deep dive #2
+hsliuping/TradingAgents-CN,32815,6839,298,Python,NOASSERTION,2025-06-26,2026-09-22,81558,v3.0,fork cluster
+HKUDS/AI-Trader,23116,3485,70,Python,,2025-10-23,2026-06-11,20915,main,deep dive #3
+OpenByteInc/QuantDinger,13556,2765,37,Python,Apache-2.0,2025-12-28,2026-11-06,91259,main,deep dive #4
+The-Swarm-Corporation/AutoHedge,6634,967,26,Python,MIT,2024-12-10,2026-05-11,8737,main,deep dive #5
+Polymarket/agents,3810,830,44,Python,MIT,2024-07-03,2024-11-05,107,main,secondary
+wquguru/nof0,2756,426,14,Go,,2025-10-22,2025-12-07,6322,main,secondary
+ginlix-ai/LangAlpha,2244,378,41,Python,Apache-2.0,2026-01-18,2026-11-06,93804,main,deep dive #7
+Lumiwealth/lumibot,2212,423,118,Python,GPL-3.0,2020-09-10,2026-11-06,494424,dev,deep dive #6
+mnemox-ai/tradememory-protocol,1440,170,10,Python,MIT,2026-02-23,2026-10-23,10737,master,journal/memory pattern
+kyky2347/ALTA,1075,128,16,Python,Apache-2.0,2026-08-27,2026-11-05,25211,main,deep dive #8 (short)
+LLMQuant/awesome-trading-agents,981,167,40,,CC0-1.0,2026-04-22,2026-08-13,3065,master,field map
+pipiku915/FinMem-LLM-StockTrading,970,196,8,Python,MIT,2023-12-01,2024-08-18,30753,main,secondary
+Open-Finance-Lab/AgenticTrading,884,175,131,Python,NOASSERTION,2025-05-21,2026-11-05,42467,main,NAME COLLISION - flag
+FinStep-AI/ContestTrade,680,152,16,Python,Apache-2.0,2025-08-08,2025-12-22,34524,main,secondary
+TauricResearch/Trading-R1,549,55,3,Python,Apache-2.0,2025-09-15,2026-11-04,7435,main,secondary

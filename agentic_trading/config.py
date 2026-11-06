@@ -131,6 +131,9 @@ class AgentConfig:
     use_llm: bool = True                  # whether the LLM path is attempted at all
     llm_temperature_note: str = ""
     min_bars_for_signals: int = 60
+    # Bars a position survives before a soft (regime-break) exit may close it.
+    # 0 disables the hold requirement. Hysteresis is the main anti-whipsaw lever.
+    min_hold_bars: int = 5
 
     @classmethod
     def from_dict(cls, d: dict[str, Any]) -> "AgentConfig":
@@ -141,6 +144,7 @@ class AgentConfig:
             use_llm=bool(_f(d, "use_llm", base.use_llm)),
             llm_temperature_note=str(_f(d, "llm_temperature_note", base.llm_temperature_note)),
             min_bars_for_signals=int(_f(d, "min_bars_for_signals", base.min_bars_for_signals)),
+            min_hold_bars=int(_f(d, "min_hold_bars", base.min_hold_bars)),
         )
 
 

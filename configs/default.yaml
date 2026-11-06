@@ -44,6 +44,7 @@ agents:
   debate_rounds: 1
   use_llm: true
   min_bars_for_signals: 60
+  min_hold_bars: 5          # hysteresis: bars before a soft regime-break exit can close
 
 backtest:
   initial_cash: 10000

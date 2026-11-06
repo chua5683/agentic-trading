@@ -1,0 +1,41 @@
+rank,stars_observed_2026-11-05,repo,language,description
+1,120871,TauricResearch/TradingAgents,Python,TradingAgents: Multi-Agents LLM Financial Trading Framework
+2,37746,HKUDS/Vibe-Trading,Python,"""Vibe-Trading: Your Personal Trading Agent"""
+3,32815,hsliuping/TradingAgents-CN,Python,基于多智能体LLM的中文金融交易框架 - TradingAgents中文增强版
+4,23116,HKUDS/AI-Trader,Python,"""AI-Trader: 100% Fully-Automated Agent-Native Trading""  "
+5,13556,OpenByteInc/QuantDinger,Python,"Open-source AI Trading OS, agent trading, and vibe trading, with Jev System One integration. Research, build Python strategies, backtest, and paper/live trade across crypto, stocks, and forex. Launch your own multi-tenant trading SaaS with built-in user management, billing, payments, and settlement."
+6,11541,simonlin1212/a-stock-data,Python,"A股全栈数据工具包：行情K线·当日逐笔·研报·信号·资金面·新闻·财务·公告·打板·ETF期权·舆情·宏观利率·期货大宗(含大商所日K)·事件驱动·可转债 | 15层·87端点·34数据源·除iwencai外免Key | A-share data for AI agents: K-lines, ticks, reports, fund flow, news, financials, filings, options, macro, futures, events, convertibles | 15 layers·87 endpoints·34 sources"
+7,7412,TraderAlice/OpenAlice,TypeScript,"Your one-person Wall Street. An AI trading agent covering equities, crypto, commodities, forex, and macro — from research through position entry, ongoing management, to exit."
+8,7259,tensortrade-org/tensortrade,Python,"An open source reinforcement learning framework for training, evaluating, and deploying robust trading agents."
+9,6634,The-Swarm-Corporation/AutoHedge,Python,"Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution."
+10,3914,simonlin1212/TradingAgents-astock,Python,"A股多Agent投研框架 — 适配A股数据源(龙虎榜/游资/解禁等)，7位分析师基于A股规则的辩论决策，基于TradingAgents深度改造，适配大A。A-share multi-agent investment research framework — 7 AI analysts, bull/bear debate, risk assessment。"
+11,3810,Polymarket/agents,Python,Trade autonomously on Polymarket using AI Agents
+12,3077,alsk1992/CloddsBot,TypeScript,"Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans    for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude."
+13,2756,wquguru/nof0,Go,Open-source AI trading arena. A full reproduction of NOF1 Alpha Arena for running and comparing LLM agents.
+14,2568,quantskills/quantskills,JavaScript,"QuantSkills组织的全景导航 ：面向 AI Agent 的开源量化 Skill & Agent 生态，从数据、因子研究、回测验证到风险监控与交易自动化。｜Open-source Quant Skills & Agents for AI-driven research, backtesting, risk and trading automation.——Panoramic navigator for the QuantSkills organization"
+15,2511,study8677/awesome-architecture,Vue,"🧭 Architecture-first system design: 26 bilingual tutorials, 25 architecture templates, and 6 end-to-end cases covering distributed systems, AI-native systems, RAG, coding Agents, and production trade-offs."
+16,2426,chrisworsey55/atlas-gic,Python,ATLAS by General Intelligence Capital — Self-improving AI trading agents using Karpathy-style autoresearch
+17,2244,ginlix-ai/LangAlpha,Python,Claude Code for Financial Market
+18,2212,Lumiwealth/lumibot,Python,"Python trading framework with AI agents that actually place the trade. Backtest, paper and live trade on 12 brokers: stocks, options, futures, forex, crypto and prediction markets."
+19,1929,Yvictor/TradingGym,Python,Trading and Backtesting environment for training reinforcement learning agent or simple rule base algo.
+20,1866,Barca0412/Introduction-to-Quantitative-Finance,Python,"AI+金融（量化）：1.多因子股票量化框架开源教程 2.学界和业界的经典资料收录 3.AI + 金融的相关工作，包括LLM, Agent, benchmark(evaluation), etc."
+21,1508,deependersingla/deep_trader,Python,This project uses reinforcement learning on stock market and agent tries to learn trading. The goal is to check if the agent can learn to read tape. The project is dedicated to hero in life great Jesse Livermore. 
+22,1440,mnemox-ai/tradememory-protocol,Python,"Decision audit trail + persistent memory for AI trading agents. Outcome-weighted recall, tamper-evident SHA-256 chain with RFC 3161 anchoring, 20 MCP tools."
+23,1075,kyky2347/ALTA,Python,"Autonomous LLM Trading Asterism — a research-only multi-agent trading platform with evidence-first research, an auditable console, Shadow simulation and explicitly authorized broker execution."
+24,1013,ZhangJinHaHaHa/AgentLens,TypeScript,"Agentlens is a trusted agent trading platform.  Here, you can quickly find the Agent that meets your needs, and you can also publish your own Agent to turn it into your digital asset.  We encourage everyone to transform their areas of expertise into Agents and turn them into digital assets, allowing others to see your unique strengths."
+25,981,LLMQuant/awesome-trading-agents,,"Curated list of LLM-driven trading agents, MCP servers, and agent skills for market research, strategy, and execution."
+26,970,pipiku915/FinMem-LLM-StockTrading,Python,FinMem: A Performance-Enhanced LLM Trading Agent with Layered Memory and Character Design
+27,966,sadighian/crypto-rl,Python,Deep Reinforcement Learning toolkit: record and replay cryptocurrency limit order book data & train a DDQN agent
+28,890,KylinMountain/TradingAgents-AShare,Python,A 股多智能体智能投研系统 — 基于 TradingAgents 架构，15 名 AI Agent 模拟机构协作与实时辩论对抗，全流程可视化，支持 OpenClaw / Claude Code 集成，Docker 一键部署。
+29,884,Open-Finance-Lab/AgenticTrading,Python,
+30,870,ygwyg/MAHORAGA,TypeScript,"autonomous trading agent powered by social sentiment analysis and ai that learns, grows, and adapts"
+31,853,swapperfinance/swapper-toolkit,,"DeFi toolkit for AI agents and coding assistants — deposit funds, execute trades, and manage crypto wallets. Works with Claude Code, Cursor,   Windsurf, OpenClaw, CrewAI, AutoGPT, and other AI agent frameworks."
+32,802,krakenfx/kraken-cli,Rust,"Trade crypto, tokenized stocks, forex and futures on Kraken from your terminal or your AI agent. Built-in MCP server for Claude, Codex and Cursor, JSON output, and paper trading on live prices."
+33,797,samre12/deep-trading-agent,Python,Deep Reinforcement Learning based Trading Agent for Bitcoin
+34,793,aarora4/Awesome-Prediction-Market-Tools,,"A curated list of Prediction Market Tools - AI Agents, Analytics, APIs, Dashboards, Copy Trading, Alerting, Tracking and More!!"
+35,769,YoungCan-Wang/WyckoffTradingAgent,Python,"Open-source Wyckoff trading agent and AI stock screener for volume-price analysis, A-share screening, CLI workflows, and MCP tools.灵感来自秋生trader @Hoyooyoo"
+36,762,terryso/nof1-tracker,TypeScript,A command-line tool for tracking nof1.ai AI Agent trading signals and automatically executing Binance futures trades
+37,723,MobiusQuant/OpenMobius-skill,Python,ICT/SMC trading-knowledge skill for AI coding agents (Claude Code / Codex / OpenClaw / Hermes)
+38,690,195440/nof1.ai,TypeScript,⚡ Open nof1.ai  | Autonomous AI Trading Agent (自主AI交易系统) 
+39,680,FinStep-AI/ContestTrade,Python,A Multi-Agent Trading System Based on Internal Contest Mechanism
+40,646,ryanfrigo/kalshi-ai-trading-bot,Python,"The honest edge layer for Kalshi prediction markets - an agent-native toolkit (CLI, MCP server, Claude skill) that measures whether you actually beat the book instead of claiming it."
