@@ -277,6 +277,8 @@ tests/              222 tests; every safety claim above is asserted
 
 Read [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) first, then
 [docs/RESEARCH.md](docs/RESEARCH.md) for the landscape this sits in.
+[docs/ALPHA.md](docs/ALPHA.md) is the honest roadmap from "works" to "has edge",
+including the measured cross-sectional experiment.
 
 ---
 
